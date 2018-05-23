@@ -3,6 +3,7 @@
 [![TravisCI](https://api.travis-ci.org/drewcoo/doppelserver.svg)](https://travis-ci.org/drewcoo/doppelserver)
 [![CircleCI](https://circleci.com/gh/drewcoo/doppelserver.svg?style=shield)](https://circleci.com/gh/drewcoo/doppelserver)
 [![Coverage Status](https://coveralls.io/repos/github/drewcoo/doppelserver/badge.svg?branch=master)](https://coveralls.io/github/drewcoo/doppelserver?branch=master)
+[![Gem Version](https://badge.fury.io/rb/doppelserver.svg)](https://badge.fury.io/rb/doppelserver)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/doppelserver`. To experiment with that code, run `bin/console` for an interactive prompt.
 
