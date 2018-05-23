@@ -7,14 +7,15 @@ Gem::Specification.new do |spec|
   spec.version       = Doppelserver::VERSION
   spec.authors       = ['Drew Cooper']
   spec.email         = ['drewcoo@gmail.com']
-  spec.summary       = 'A REST server and a client that knows how to talk ' \
+  spec.summary       = 'DO NOT USE YET!!! EXPERIMENTAL.\n\n' \
+                       'A REST server and a client that knows how to talk ' \
                        'to it, so be used for test fakes.'
   spec.description   = 'Unlike mocks and stubs, fake services are running ' \
                        'processes that pretend to function as real ones ' \
                        'would. This enables testing the software under test ' \
-                       'with more complete control of the surfaces it talks' \
-                       'to (other services, faked). Beyond that, it makes' \
-                       'application- and (http)protocol-level fault' \
+                       'with more complete control of the surfaces it talks ' \
+                       'to (other services, faked). Beyond that, it makes ' \
+                       'application- and (http)protocol-level fault ' \
                        'injection easy.'
   spec.homepage      = 'https://github.com/drewcoo/doppelserver'
   spec.license       = 'MIT'
