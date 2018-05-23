@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.version       = Doppelserver::VERSION
   spec.authors       = ['Drew Cooper']
   spec.email         = ['drewcoo@gmail.com']
-  spec.summary       = 'DO NOT USE YET!!! EXPERIMENTAL.\n\n' \
+  spec.summary       = "DO NOT USE YET!!! EXPERIMENTAL.\n\n" \
                        'A REST server and a client that knows how to talk ' \
                        'to it, so be used for test fakes.'
-  spec.description   = 'DO NOT USE YET!!! EXPERIMENTAL.\n\n' \
+  spec.description   = "DO NOT USE YET!!! EXPERIMENTAL.\n\n" \
                        'Unlike mocks and stubs, fake services are running ' \
                        'processes that pretend to function as real ones ' \
                        'would. This enables testing the software under test ' \
