@@ -10,7 +10,8 @@ Gem::Specification.new do |spec|
   spec.summary       = 'DO NOT USE YET!!! EXPERIMENTAL.\n\n' \
                        'A REST server and a client that knows how to talk ' \
                        'to it, so be used for test fakes.'
-  spec.description   = 'Unlike mocks and stubs, fake services are running ' \
+  spec.description   = 'DO NOT USE YET!!! EXPERIMENTAL.\n\n' \
+                       'Unlike mocks and stubs, fake services are running ' \
                        'processes that pretend to function as real ones ' \
                        'would. This enables testing the software under test ' \
                        'with more complete control of the surfaces it talks ' \
