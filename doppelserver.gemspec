@@ -40,6 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'bundler', '~> 1.13'
   spec.add_development_dependency 'faraday', '~> 0.10.0' # TODO: development only?
+  spec.add_development_dependency 'gem-release'
   # spec.add_development_dependency 'rack-test', '~> 0.6.3'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
