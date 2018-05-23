@@ -1,7 +1,7 @@
 # Doppelserver
 
-[![TravisCI](https://api.travis-ci.org/drewcoo/rutl.svg)](https://travis-ci.org/drewcoo/rutl)
-[![CircleCI](https://circleci.com/gh/drewcoo/rutl.svg?style=shield)](https://circleci.com/gh/drewcoo/rutl)
+[![TravisCI](https://api.travis-ci.org/drewcoo/doppelserver.svg)](https://travis-ci.org/drewcoo/doppelserver)
+[![CircleCI](https://circleci.com/gh/drewcoo/doppelserver.svg?style=shield)](https://circleci.com/gh/drewcoo/doppelserver)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/doppelserver`. To experiment with that code, run `bin/console` for an interactive prompt.
 
