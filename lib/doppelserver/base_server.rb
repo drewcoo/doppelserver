@@ -26,7 +26,7 @@ module Doppelserver
     end
 
     get '/' do
-      body = 'here i am' # TODO: Change this.
+      'here i am' # TODO: Change this.
     end
 
     get '/:endpoint/:id' do
@@ -56,7 +56,7 @@ module Doppelserver
              rescue
                halt 403, "BAD DATA:\n#{raw_data}"
              end
-      body = json(id: @@data.add(collection, data))
+      json(id: @@data.add(collection, data))
     end
 
     post '/:endpoint/:id' do

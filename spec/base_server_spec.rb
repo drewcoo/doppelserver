@@ -22,8 +22,8 @@ describe Doppelserver::BaseServer do
     expect(last_response).to be_ok
   end
 
-  context 'post to add to a collection' do
-    context 'returns' do
+  context 'when post to add to a collection' do
+    context 'with returns' do
       it '403s when no payload is passed' do
         post '/foos'
         expect(last_response.status).to eq(403)
@@ -34,8 +34,8 @@ describe Doppelserver::BaseServer do
         expect(last_response.status).to eq(403)
       end
 
-      context 'element id' do
-        before(:each) do
+      context 'with element id' do
+        before do
           delete '/control/data'
           expect(last_response.status).to eq(200)
         end
@@ -58,8 +58,8 @@ describe Doppelserver::BaseServer do
     end
   end
 
-  context 'post to update an element' do
-    before(:each) do
+  context 'when post to update an element' do
+    before do
       delete '/control/data'
       expect(last_response.status).to eq(200)
       post '/things', { name: 'first', description: 'first thing' }.to_json
@@ -83,10 +83,9 @@ describe Doppelserver::BaseServer do
     end
   end
 
-  context 'put to replace an element'
-
-  context 'get' do
-    before(:each) do
+  context 'when put to replace an element'
+  context 'with get' do
+    before do
       delete '/control/data'
       expect(last_response.status).to eq(200)
     end
@@ -119,8 +118,8 @@ describe Doppelserver::BaseServer do
     end
   end
 
-  context 'delete' do
-    before(:each) do
+  context 'when delete' do
+    before do
       delete '/control/data'
       post '/foos', { name: 'first', other: 'thing' }.to_json
       get '/foos/0'
