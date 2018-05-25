@@ -9,3 +9,9 @@ require 'doppelserver'
 # TODO: Get simplecov report for all code.
 require 'simplecov'
 SimpleCov.start
+
+RSpec.configure do |config|
+  config.disable_monkey_patching!
+  config.fail_fast = 0
+  config.order = :random
+end

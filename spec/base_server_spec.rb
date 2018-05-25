@@ -14,7 +14,7 @@ module RSpecMixin
 end
 RSpec.configure { |c| c.include RSpecMixin }
 
-describe Doppelserver::BaseServer do
+RSpec.describe Doppelserver::BaseServer do
   it 'something' do
     get '/'
     expect(last_response.body).to eq('here i am')
