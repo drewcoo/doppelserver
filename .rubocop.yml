@@ -1,6 +1,14 @@
 inherit_from: .rubocop_todo.yml
 
 require: rubocop-rspec
+# We have some problems here.
+# 1st, drewcoo-cops isn't called unless it's after rubocop-rspec.
+# 2nd, there is spew aboutu RSpec/FilePath has the wrong namespace.
+# 3rd, there are warnings about RSpec tests in the todo file.
+# That last one's my doing but I only get the spew when my gem is here, too.
+# Searching the web they're all more likely rubocop-rspec's fault than my code.
+# So I'll leave this as is and look into it later. TODO: Look into it.
+require: drewcoo-cops
 
 AllCops:
   DefaultFormatter: progress

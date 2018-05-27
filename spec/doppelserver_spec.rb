@@ -2,6 +2,7 @@ require 'spec_helper'
 
 RSpec.describe Doppelserver do
   it 'has a version number' do
+    sleep 6
     expect(Doppelserver::VERSION).not_to be nil
   end
 
