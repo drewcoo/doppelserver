@@ -38,7 +38,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Scenarios this should cover:
+* Fake a server from your (integration) tests
+  * Default behaviors
+    * Imagine a really stupid CRUD database backing the test server,
+      one that auto-created schema as it went. That's pretty much it.
+      How? Easy. Instead of a db it's just a hash in memory. Dumb? Yup.
+  * Overrides
+    * Control endpoints
+* Run interactively (irb/pry console?) while debugging your code
+* Record endpoint usage?
+* Types of service:
+  * REST-ish
+  * GraphQL
+  * Others? (WSDL?)
+* Client bindings? Not sure that makes sense unless it's POROs or x-language.
+
 
 ## Development
 
