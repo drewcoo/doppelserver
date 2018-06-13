@@ -38,19 +38,19 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'activesupport', '~> 5.0.0.1'
+  spec.add_development_dependency 'activesupport', '~> 5.0'
   spec.add_development_dependency 'bundler', '~> 1.13'
-  spec.add_development_dependency 'coveralls'
-  spec.add_development_dependency 'drewcoo-cops'
-  spec.add_development_dependency 'faraday', '~> 0.10.0' # TODO: development only?
-  spec.add_development_dependency 'gem-release'
-  # spec.add_development_dependency 'rack-test', '~> 0.6.3'
+  spec.add_development_dependency 'coveralls', '~> 0.8'
+  spec.add_development_dependency 'drewcoo-cops', '~> 0.1'
+  spec.add_development_dependency 'faraday', '~> 0.10' # TODO: development only?
+  spec.add_development_dependency 'gem-release', '~> 1.0'
+  # spec.add_development_dependency 'rack-test', '~> 0.6'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rspec_junit_formatter', '~> 0.3'
   spec.add_development_dependency 'rubocop', '~> 0.55'
-  spec.add_development_dependency 'rubocop-rspec'
-  spec.add_development_dependency 'simplecov', '~> 0.12.0'
-  spec.add_development_dependency 'sinatra', '~> 1.4.7'
-  spec.add_development_dependency 'sinatra-contrib', '~> 1.4.7'
+  spec.add_development_dependency 'rubocop-rspec', '~> 1.25'
+  spec.add_development_dependency 'simplecov', '~> 0.12'
+  spec.add_development_dependency 'sinatra', '~> 1.4'
+  spec.add_development_dependency 'sinatra-contrib', '~> 1.4'
 end
