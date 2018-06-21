@@ -2,6 +2,7 @@
 
 [![TravisCI](https://api.travis-ci.org/drewcoo/doppelserver.svg)](https://travis-ci.org/drewcoo/doppelserver)
 [![CircleCI](https://circleci.com/gh/drewcoo/doppelserver.svg?style=shield)](https://circleci.com/gh/drewcoo/doppelserver)
+[![AppVeyor](https://ci.appveyor.com/api/projects/status/ho7j5joad8hk867s?svg=true)](https://ci.appveyor.com/project/drewcoo/doppelserver)
 [![Coverage Status](https://coveralls.io/repos/github/drewcoo/doppelserver/badge.svg?branch=master)](https://coveralls.io/github/drewcoo/doppelserver?branch=master)
 [![Gem Version](https://badge.fury.io/rb/doppelserver.svg)](https://badge.fury.io/rb/doppelserver)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dd50d7ee18ae46c38ad053cf3dc59794)](https://www.codacy.com/app/drewcoo/doppelserver?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=drewcoo/doppelserver&amp;utm_campaign=Badge_Grade)
