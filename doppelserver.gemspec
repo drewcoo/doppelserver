@@ -21,11 +21,10 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/drewcoo/doppelserver'
   spec.license       = 'MIT'
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the
-  # 'allowed_push_host' to allow pushing to a single host or delete this
-  # section to allow pushing to any host.
+  # Odd. I had a typo here (doppelserver misspelled) and now it's needed
+  # to publish to Rubygems? Fix this.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'https://rubygems.org/gems/doppelserver'
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org/gems/doppleserver'
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
           'public gem pushes.'
