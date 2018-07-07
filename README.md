@@ -21,9 +21,7 @@ Also, all the cool names were taken on RubyGems.
 
 Add this line to your application's Gemfile:
 
-    ```ruby
     gem 'doppelserver'
-    ```
 
 And then execute:
 
@@ -51,22 +49,21 @@ Scenarios this should cover:
   * Others? (WSDL?)
 * Client bindings? Not sure that makes sense unless it's POROs or x-language.
 
-
 ## Development
 
 After checking out the repo, run `bundle` to install dependencies. Then, run `bundle exec rake` to run the tests.
 
 To install this gem onto your local machine, run
 
-    `bundle exec rake install`
+    bundle exec rake install
 
 To release a new version, update the version number in `version.rb` like so
 
-    `bundle exec gem bump -v [major|minor|patch|pre|release]`
+    bundle exec gem bump -v [major|minor|patch|pre|release]
 
 and then run
 
-    `bundle exec rake release`
+    bundle exec rake release
 
 which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
