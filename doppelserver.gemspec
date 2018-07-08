@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   # Odd. I had a typo here (doppelserver misspelled) and now it's needed
   # to publish to Rubygems? Fix this.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'https://rubygems.org/gems/doppleserver'
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org/gems/doppelserver'
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
           'public gem pushes.'
