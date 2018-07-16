@@ -11,9 +11,9 @@ module CaptureHelper
   # Because this seems wrong, I'm leaving it notably ugly so that I'll notice
   # and maybe improve it later.
   #
-  MATCH_NONSLASH = /([^\/]+)/
-  MATCH_NUMBER = /([\d]+)/
+  MATCH_NONSLASH = %r{([^/]+)}
+  MATCH_NUMBER = %r{(\d+)}
   # These start with optional everythingm followed bu slash-separated matches
-  COLLECTION_ONLY = /.*\/#{MATCH_NONSLASH}\/?/ # possible trailing slash
-  COLLECTION_AND_ID = /.*\/#{MATCH_NONSLASH}\/#{MATCH_NUMBER}/
+  COLLECTION_ONLY = %r{.*/#{MATCH_NONSLASH}/?} # possible trailing slash
+  COLLECTION_AND_ID = %r{.*/#{MATCH_NONSLASH}/#{MATCH_NUMBER}}
 end

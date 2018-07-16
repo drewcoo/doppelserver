@@ -9,7 +9,7 @@ require 'json'
 # decided what to name yet.
 #
 class ServiceController
-  SERVER = 'http://127.0.0.1'
+  SERVER = 'http://127.0.0.1'.freeze
 
   attr_reader :port
 
