@@ -1,12 +1,7 @@
 require 'spec_helper'
+require 'json'
 ENV['RACK_ENV'] = 'test'
 require 'rack/test'
-require 'rspec'
-require File.expand_path '../lib/doppelserver/base_server.rb', __dir__
-require 'json'
-
-# require File.expand_path '../spec_helper.rb', __FILE__
-require 'spec_helper'
 
 module RSpecMixin
   include Rack::Test::Methods
@@ -14,10 +9,10 @@ module RSpecMixin
 end
 RSpec.configure { |c| c.include RSpecMixin }
 
-RSpec.describe Doppelserver::BaseServer do
+RSpec.describe Doppelserver::BaseServer, :fast do
   it 'something' do
-    get '/'
-    expect(last_response.body).to eq('here i am')
+    get '/control'
+    expect(JSON.parse(last_response.body)['status']).to eq('running')
     expect(last_response.status).to eq(200)
     expect(last_response).to be_ok
   end
@@ -128,7 +123,6 @@ RSpec.describe Doppelserver::BaseServer do
 
     it 'can remove an existing item' do
       delete '/foos/0'
-      # expect(last_response).to be_ok
       expect(last_response.status).to eq(200)
       get '/foos/0'
       expect(last_response.status).to eq(404)
@@ -147,6 +141,31 @@ RSpec.describe Doppelserver::BaseServer do
     it 'cannot remove singular item' do
       delete '/foo/0'
       expect(last_response.status).to eq(403)
+    end
+  end
+
+  context 'when prefix in url' do
+    before do
+      delete '/control/data'
+    end
+
+    it 'can add data to url' do
+      post '/superserver/v3/myapp/foos',
+           { name: 'first', other: 'thing one' }.to_json
+      expect(last_response).to be_ok
+      get '/foos/0'
+      expect(last_response).to be_ok
+      response = JSON.parse(last_response.body)
+      expect(response['name']).to eq('first')
+    end
+
+    it 'can get data from url' do
+      post '/foos', { name: 'first', other: 'thing one' }.to_json
+      expect(last_response).to be_ok
+      get '/some/long-url/thing/like/foos/0'
+      expect(last_response).to be_ok
+      response = JSON.parse(last_response.body)
+      expect(response['name']).to eq('first')
     end
   end
 end

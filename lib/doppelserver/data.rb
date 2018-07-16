@@ -4,7 +4,12 @@ module Doppelserver
   #
   class Data
     #
-    # Initiallizes (cleared) all internal data.
+    # @data will be COLLECTION : { 0: { HASH }, 1: { HASH }, ... }
+    #       with the number autoincrementing by default
+    # @next_keys is the hash of COLLECTION names and the next auto-
+    #       incrementing value
+    #
+    # And now it's all empty.
     #
     def initialize
       @data = {}
@@ -33,6 +38,18 @@ module Doppelserver
     def collection_key?(collection, key)
       collection?(collection) && @data[collection].key?(key)
     end
+
+    def hash
+      { 'data' => @data,
+        'next_keys' => @next_keys }
+    end
+    alias export hash
+
+    def hash=(hash)
+      @data = hash['data']
+      @next_keys = hash['next_keys']
+    end
+    alias import hash=
 
     #
     # Returns collection named parameter name.
