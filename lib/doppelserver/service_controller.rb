@@ -20,7 +20,7 @@ class ServiceController
   def start
     command = "ruby #{__FILE__} server #{@port}"
     command = if ENV['OS'] == 'Windows_NT'
-                "start \"doppelserver\" cmd /c #{command}"
+                "start /MIN \"doppelserver\" cmd /c #{command}"
               else
                 "nohup #{command} &"
               end
