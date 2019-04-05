@@ -1,15 +1,22 @@
-require 'coveralls'
-Coveralls.wear!
-
-# TODO: Get simplecov report for all code.
 require 'simplecov'
-SimpleCov.start
+require 'coveralls'
+
+SimpleCov.formatters = \
+  SimpleCov::Formatter::MultiFormatter.new(
+    [SimpleCov::Formatter::HTMLFormatter,
+     Coveralls::SimpleCov::Formatter]
+  )
+
+SimpleCov.start do
+  add_filter 'app/secrets'
+end
 
 require 'json'
 require 'rspec'
 
 $LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 require 'doppelserver'
+
 
 # Used in service_controller_spec and command_line_spec:
 DEFAULT_DATA = { 'data' => {}, 'next_keys' => {} }.to_json
